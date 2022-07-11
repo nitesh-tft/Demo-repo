@@ -17,3 +17,11 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+- task: AzureVmssDeployment@0
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise Subscription(61c33b54-9028-4b9c-a292-49e1dc4e0118)'
+    action: 'Update image'
+    vmssName: 'myvm'
+    vmssOsType: 'Windows'
